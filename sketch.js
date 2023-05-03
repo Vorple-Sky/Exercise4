@@ -1,6 +1,6 @@
 //p5 sound library https://p5js.org/reference/#/libraries/p5.sound
 
-let violet, iris, jasmine;
+let mushroom, water, tree;
 
 //declare variable up at the top
 let mySound1, mySound2, mySound3;
@@ -27,28 +27,29 @@ function setup() {
     //play sound when mouse is pressed on the canvas
     //cnv.mousePressed(toggleSound);
 
-    violet = createImg("images/violet.png");
-    violet.class('flower');
-    violet.position(200, 300);
+    mushroom = createImg("images/mushroom.png");
+    mushroom.class('forest');
 
-    iris = createImg("images/iris.png");
-    iris.class('flower');
-    iris.position(700, 300);
+    mushroom.position(100, 200);
 
-    jasmine = createImg("images/jasmine.png");
-    jasmine.class('flower');
-    jasmine.position(1200, 300);
+    water = createImg("images/water.png");
+    water.class('forest');
+    water.position(600, 200);
+
+    tree = createImg("images/tree.png");
+    tree.class('forest');
+    tree.position(1100, 200);
     
   }
   
   function draw() {
     background(0);
-    violet.mousePressed(makeViolet);
-    iris.mousePressed(makeIris);
-    jasmine.mousePressed(makeJasmine);
+    mushroom.mousePressed(makeMushroom);
+    water.mousePressed(makeWater);
+    tree.mousePressed(makeTree);
   }
 
-  function makeViolet() {
+  function makeMushroom() {
     if (mySound1.isPlaying()){
       mySound1.pause();
     } else {
@@ -56,7 +57,7 @@ function setup() {
     }
   }
 
-  function makeIris() {
+  function makeWater() {
     if (mySound2.isPlaying()){
       mySound2.pause();
     } else {
@@ -65,7 +66,7 @@ function setup() {
   }
 
 
-  function makeJasmine() {
+  function makeTree() {
     if (mySound3.isPlaying()){
       mySound3.pause();
     } else {

@@ -11,10 +11,12 @@ body{
     left: 0;
 }
 
-.flower{
+.forest{
     transition: all .2s ease-in-out;
+    width: 15%;
+    height: 30%;
 }
 
-.flower:hover{
+.forest:hover{
     transform: scale(1.1);
 }
